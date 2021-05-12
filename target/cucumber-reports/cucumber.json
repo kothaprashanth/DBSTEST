@@ -1,0 +1,115 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-05-12T18:02:37.517Z",
+        "line": 13,
+        "name": "Open Google",
+        "description": "",
+        "id": "google;open-google;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 2360114100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.DbsSteps.closeDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 15724750700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user navigate to DBS Landing Page",
+            "match": {
+              "location": "stepDefinitions.DbsSteps.theUserNavigateToDBSLandingPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7112622200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user clicks on Cards Option",
+            "match": {
+              "location": "stepDefinitions.DbsSteps.theUserClicksOnCardsOption()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 386762100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user clicks on CreditCards Option",
+            "match": {
+              "location": "stepDefinitions.DbsSteps.theUserClicksOnCreditCardsOption()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5335715000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User Select Two Credit Cards DBS Altitude Visa Signature Card and DBS Black Visa Card",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DBS Altitude Visa Signature Card",
+                  "offset": 29
+                },
+                {
+                  "val": "DBS Black Visa Card",
+                  "offset": 66
+                }
+              ],
+              "location": "stepDefinitions.DbsSteps.userSelectTwoCreditCards(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1364151000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User Validates the Details of DBS Altitude Visa Signature Card and DBS Black Visa Card",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DBS Altitude Visa Signature Card",
+                  "offset": 30
+                },
+                {
+                  "val": "DBS Black Visa Card",
+                  "offset": 67
+                }
+              ],
+              "location": "stepDefinitions.DbsSteps.userValidatesTheDetailsOfCardsSelected(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Google",
+    "description": "",
+    "id": "google",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/dbs.feature",
+    "tags": []
+  }
+]
