@@ -7,6 +7,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 
 import java.util.List;
@@ -50,7 +53,19 @@ public class BasePage {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
-
+    public void waitUntilVisible(By by)
+    {
+        WebDriverWait wait=new WebDriverWait(driver,5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+    }
+    public void genericWait()
+    {
+       try {
+           Thread.sleep(5000);
+       }
+       catch (Exception e)
+       {}
+    }
     public void quitDriver()
     {
         driver.quit();

@@ -42,13 +42,7 @@ public class DbsSteps {
 
     @Then("^User Select Two Credit Cards (.+) and (.+)$")
     public void userSelectTwoCreditCards(String cardOne,String cardTwo) {
-
-        try {
-            Thread.sleep(4000);
-        }
-        catch (Exception e)
-        {}
-
+        basePage.genericWait();
         landingPage.selectCheckBox(cardOne);
         landingPage.selectCheckBox(cardTwo);
         landingPage.clickOnCompareButton();
